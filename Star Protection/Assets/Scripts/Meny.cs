@@ -2,25 +2,39 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Meny : MonoBehaviour
 {
-    [SerializeField] GameObject one;
-    [SerializeField] GameObject two;
-    [SerializeField] GameObject three;
-    public void one_meny(){
-        one.gameObject.SetActive(true);
-        two.gameObject.SetActive(false);
-        three.gameObject.SetActive(false);
+    [SerializeField] GameObject Main;
+    [SerializeField] GameObject Setin;
+    [SerializeField] GameObject Stars;
+    [SerializeField] GameObject Materials;
+    public void to_main(){
+        Main.gameObject.SetActive(true);
+        Setin.gameObject.SetActive(false);
+        Stars.gameObject.SetActive(false);
+        Materials.gameObject.SetActive(false);
     }
-    public void two_meny(){
-        one.gameObject.SetActive(false);
-        two.gameObject.SetActive(true);
-        three.gameObject.SetActive(false);
+    public void to_set(){
+        Main.gameObject.SetActive(false);
+        Setin.gameObject.SetActive(true);
+        Stars.gameObject.SetActive(false);
+        Materials.gameObject.SetActive(false);
     }
-    public void three_meny(){
-        one.gameObject.SetActive(false);
-        two.gameObject.SetActive(false);
-        three.gameObject.SetActive(true);
+    public void to_stars(){
+        Main.gameObject.SetActive(false);
+        Setin.gameObject.SetActive(false);
+        Stars.gameObject.SetActive(true);
+        Materials.gameObject.SetActive(false);
+    }
+    public void to_maters(){
+        Main.gameObject.SetActive(false);
+        Setin.gameObject.SetActive(false);
+        Stars.gameObject.SetActive(false);
+        Materials.gameObject.SetActive(true);
+    }
+    public void sc_star1(){
+        SceneManager.LoadScene(1);
     }
 }
