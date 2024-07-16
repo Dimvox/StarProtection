@@ -10,6 +10,7 @@ public class Meny : MonoBehaviour
     [SerializeField] GameObject Setin;
     [SerializeField] GameObject Stars;
     [SerializeField] GameObject Materials;
+
     public void to_main(){
         Main.gameObject.SetActive(true);
         Setin.gameObject.SetActive(false);
@@ -36,5 +37,9 @@ public class Meny : MonoBehaviour
     }
     public void sc_star1(){
         SceneManager.LoadScene(1);
+
+        //если что, логотип игры должен быть только на главном экране 
+        //а звезды в первой и второй сцене должны быть разные для более сильного ощущения что это другая сцена
+        //и что если сделать чтобы вместо того чтобы скрывать объекты по отдельности, скрывать только пустышку MainMenu/StarsSelectMenu (сам я не трогал, боялся сломать)
     }
 }
